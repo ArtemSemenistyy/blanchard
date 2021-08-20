@@ -254,6 +254,10 @@ p {
   margin-right: 96px;
 }
 
+.dropdown {
+  position: relative;
+}
+
 .header-bottom__btn {
   position: relative;
 
@@ -315,7 +319,7 @@ p {
   background-color: transparent;
 }
 
-.header-bottom__dropdown {
+.header__dropdown-list {
   display: none;
   position: absolute;
   top: 70px;
@@ -327,7 +331,7 @@ p {
   background-color: rgba(0, 0, 0, .6);
 }
 
-.header-bottom__dropdown-active {
+.dropdown-active {
   display: block;
 }
 
