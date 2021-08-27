@@ -34,11 +34,13 @@ document.addEventListener('DOMContentLoaded', function () {
     itemSelectText: '',
   });
 
-  //Swiper
+  //Gallery Swiper
 
   var swiper = new Swiper(".section-gallery__swiper", {
     slidesPerView: 3,
-    slidesPerColumn: 2,
+    grid: {
+      rows: 2,
+    },
     slidesPerGroup: 3,
     spaceBetween: 50,
     allowTouchMove: false,
@@ -92,10 +94,6 @@ document.addEventListener('DOMContentLoaded', function () {
     $(".accordion").accordion();
   });
 
-  $(function () {
-    $(".g").accordion();
-  });
-
   //Accordion tab
 
   const accordionButtons = document.querySelectorAll('.section-catalog__item-btn');
@@ -117,11 +115,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
   //Show all button
 
-  document.querySelector('.section-events__show-all-btn').addEventListener('click', function() {
+  document.querySelector('.section-events__show-all-btn').addEventListener('click', function () {
     document.querySelectorAll('.section-events__item-hidden').forEach(function (hiddenItem) {
       hiddenItem.classList.toggle('section-events__item-hidden');
     });
 
     document.querySelector('.section-events__show-all-btn').classList.add('section-events__show-all-btn-hidden');
+  });
+
+  //Editions Swiper
+
+  var swiper = new Swiper(".section-editions__swiper", {
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    spaceBetween: 50,
+    allowTouchMove: false,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
   });
 });
