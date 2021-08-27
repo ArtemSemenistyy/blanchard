@@ -139,4 +139,19 @@ document.addEventListener('DOMContentLoaded', function () {
       prevEl: ".swiper-button-prev",
     },
   });
+
+  //Projects Swiper
+
+  var swiper = new Swiper(".section-projects__swiper", {
+    slidesPerView: 3,
+    spaceBetween: 50,
+    slidesPerGroup: 3,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    allowTouchMove: false,
+    navigation: {
+      nextEl: ".section-projects__swiper-button-next",
+      prevEl: ".section-projects__swiper-button-prev",
+    },
+  });
 });
