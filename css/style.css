@@ -1264,7 +1264,7 @@ p {
   margin-bottom: 15px;
 }
 
-.section-edition__swiper-slide {
+.section-editions__swiper-slide {
   height: 100%;
   padding-top: 94px;
 }
@@ -1474,7 +1474,7 @@ input::-webkit-inner-spin-button {
   color: var(--white);
 }
 
-.section-edition__swiper-slide .swiper-slide__img {
+.section-editions__swiper-slide .swiper-slide__img {
   margin-bottom: 20px;
   width: 100%;
 }
@@ -1739,6 +1739,205 @@ input::-webkit-inner-spin-button {
 .section-projects__swiper-button-next:active:after {
   background-color: #D1A9F0;
   border: 2px solid var(--purple);
+}
+
+/* Contacts */
+
+.section-contacts__bottom {
+  display: flex;
+}
+
+.section-contacts__title {
+  margin-bottom: 16px;
+  padding-left: 160px;
+}
+
+.section-contacts__left {
+  padding: 123px 122px 0 159px;
+  border: 1px solid #cacaca;
+  width: 682px;
+  height: 700px;
+}
+
+.section-contacts__left-title {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  color: var(--dark);
+}
+
+.section-contacts__address {
+  margin-bottom: 35px;
+
+  color: var(--dark);
+}
+
+.section-contacts__form-title {
+  margin-bottom: 16px;
+
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  color: var(--dark);
+}
+
+.section-contacts__form {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 38px;
+}
+
+.section-contacts__input {
+  margin-bottom: 23px;
+  padding: 4px 23px;
+  height: 40px;
+  width: 400px;
+  border: 1px solid var(--dark);
+  border-radius: 100px;
+
+  color: var(--dark);
+
+  transition: background-color .15s ease-in;
+}
+
+.section-contacts__input:hover,
+.section-contacts__input:active,
+.section-contacts__input:focus {
+  background-color: #ececec;
+}
+
+.section-contacts__input:nth-child(2) {
+  margin-bottom: 22px;
+}
+
+.section-contacts__input::placeholder {
+  line-height: 32px;
+  color: var(--light-gray);
+}
+
+.section-contacts__btn-submit {
+  position: relative;
+  align-self: start;
+  padding: 15px 33.5px;
+
+  border: 2px solid var(--purple);
+
+  color: var(--purple);
+
+  background-color: transparent;
+
+  transition: background-color .15s ease-in, color .15s ease-in;
+}
+
+.section-contacts__btn-submit:focus::before {
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  right: -5px;
+  left: -5px;
+  content: '';
+  border-radius: 100px;
+  border: 2px solid var(--light-purple);
+}
+
+.section-contacts__btn-submit:hover {
+  color: var(--white);
+  background-color: var(--purple);
+}
+
+.section-contacts__btn-submit:active {
+  padding: 14px 32px;
+  color: var(--white);
+  background-color: var(--dark-purple);
+  border: 3px solid #D1A9F0;
+}
+
+.section-contacts__btn-submit:active::before {
+  border: none;
+}
+
+.section-contacts__links-title {
+  margin-bottom: 15px;
+
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  color: var(--dark);
+}
+
+.section-contacts__link {
+  transition: opacity .15s ease-in;
+}
+
+.section-contacts__link:hover,
+.section-contacts__link:focus {
+  opacity: .5;
+}
+
+.section-contacts__link:active svg {
+  border: 1px solid #9643A4;
+  border-radius: 100%;
+}
+
+.section-contacts__list {
+  display: flex;
+}
+
+.section-contacts__item {
+  margin-right: 20px;
+}
+
+.section-contacts__map {
+  width: 100%;
+  height: 700px;
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+.js-validate-error-label {
+  color: #D11616 !important;
+  padding-left: 25px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.js-validate-error-field {
+  border: 1px solid #D11616 !important;
+}
+
+/* Footer */
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  background-color: var(--black);
+}
+
+.footer__social-list {
+  margin-top: -3px;
+}
+
+.footer__social-item:not(:last-child){
+  margin-right: 16px;
+}
+
+.footer__social-link .footer__social-logo path {
+  transition: fill .15s ease-in;
+}
+
+.footer__social-link:focus .footer__social-logo path,
+.footer__social-link:hover .footer__social-logo path {
+  fill: var(--white);
+}
+
+.footer__social-link:active .footer__social-logo path {
+  fill: var(--purple);
 }
 
 /* Animation */

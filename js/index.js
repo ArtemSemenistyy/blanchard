@@ -154,4 +154,51 @@ document.addEventListener('DOMContentLoaded', function () {
       prevEl: ".section-projects__swiper-button-prev",
     },
   });
+
+  //Map
+
+  ymaps.ready(init);
+  function init() {
+    const myMap = new ymaps.Map("map", {
+      center: [55.761486, 37.638931],
+      zoom: 14
+    });
+
+    const myPlacemark = new ymaps.Placemark([55.758468, 37.601088], {}, {
+      iconLayout: 'default#image',
+      iconImageHref: 'img/svg/placemark.svg',
+      iconimagesize: [20]
+    });
+
+    myMap.geoObjects.add(myPlacemark);
+  }
+
+  //Form validate
+
+  new JustValidate('.section-contacts__form', {
+    rules: {
+      name: {
+        required: true,
+        minLength: 2,
+        maxLength: 15
+      },
+
+      tel: {
+        required: true,
+        minLength: 10,
+        maxLength: 10
+      }
+    },
+
+    messages: {
+      tel: {
+        required: 'Укажите ваш телефон',
+        minLength: 'Телефон должен содержать 10 символов'
+      },
+
+      name: {
+        required: 'Как вас зовут?'
+      }
+    }
+  });
 });
